@@ -1,0 +1,29 @@
+// SubsystemA.java
+class SubsystemA {
+    public void operationA() {
+        System.out.println("Subsystem A operation");
+    }
+}
+
+// SubsystemB.java
+class SubsystemB {
+    public void operationB() {
+        System.out.println("Subsystem B operation");
+    }
+}
+
+// Facade.java
+public class Facade {
+    private SubsystemA subsystemA;
+    private SubsystemB subsystemB;
+
+    public Facade() {
+        this.subsystemA = new SubsystemA();
+        this.subsystemB = new SubsystemB();
+    }
+
+    public void operationFacade() {
+        subsystemA.operationA();
+        subsystemB.operationB();
+    }
+}
