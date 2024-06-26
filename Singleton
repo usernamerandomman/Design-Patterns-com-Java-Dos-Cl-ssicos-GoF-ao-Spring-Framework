@@ -1,0 +1,19 @@
+// Singleton.java
+public class Singleton {
+    private static Singleton instance;
+
+    // Construtor privado para evitar instanciação fora da classe
+    private Singleton() {}
+
+    // Método estático para retornar a instância única
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    public void showMessage() {
+        System.out.println("Hello from Singleton!");
+    }
+}
